@@ -60,6 +60,14 @@ a{
     border-radius: 4px;
 }
 
+.navbar__toggleBtn{
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: #d49466;
+    display: none;
+}
+
 .model ul{
     text-align: center;
     padding: 0px;
@@ -96,6 +104,7 @@ a{
         padding: 8px 24px;
     }
     .navbar__menu{
+        display: none;
         flex-direction: column;
         align-items: center;
         width: 100%;
@@ -107,9 +116,14 @@ a{
     }
 
     .navbar__links{
+        display: none;
         justify-content: center;
         width: 100%;
-        padding-left: 0;
+        padding-left: 0px;
+    }
+
+    .navbar__toggleBtn{
+        display: block;
     }
     
     .model{
@@ -131,5 +145,10 @@ a{
         flex-direction: column;
         align-items: center;
         width: 100%;
+    }
+
+    .navbar__menu.active,
+    .navbar__links.active{
+        display: flex;
     }
 }
